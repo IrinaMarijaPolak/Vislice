@@ -1,6 +1,6 @@
 import random
 
-STEVILO_DOVOLJENI_NAPAK = 10
+STEVILO_DOVOLJENIH_NAPAK = 10
 PRAVILNA_CRKA = '+'
 PONOVLJENA_CRKA = '0'
 NAPACNA_CRKA = '-'
@@ -34,7 +34,7 @@ class Igra:
         return True
 
     def poraz(self):
-        return self.stevilo_napak() > STEVILO_DOVOLJENI_NAPAK
+        return self.stevilo_napak() > STEVILO_DOVOLJENIH_NAPAK
 
     def pravilni_del_gesla(self):
         delni = ""
