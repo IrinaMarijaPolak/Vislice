@@ -16,6 +16,7 @@
 
   % preostali_poskusi = model.STEVILO_DOVOLJENIH_NAPAK - igra.stevilo_napak() + 1
   Število preostalih poskusov: {{preostali_poskusi}}
+  <img src="/img/{{igra.stevilo_napak() - 1}}.jpg" alt="obesanje">
 </body>
 
 % if poskus == model.ZMAGA:
