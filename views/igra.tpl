@@ -39,7 +39,7 @@
 
  <form action="/igra/" method="post">
     Črka: <input type="text" name= "crka">
-    <button type="submit">Poslji ugib</button>
+    <button type="submit">Pošlji ugib</button>
   </form>
 
  % end
