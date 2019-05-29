@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html>
+
 % import model
-<body>
+% rebase ('base.tpl', title = 'Vislice')
+
 
   <h1>Vislice</h1>
 
@@ -17,12 +17,12 @@
   % preostali_poskusi = model.STEVILO_DOVOLJENIH_NAPAK - igra.stevilo_napak() + 1
   Število preostalih poskusov: {{preostali_poskusi}}
   <img src="/img/{{igra.stevilo_napak() - 1}}.jpg" alt="obesanje">
-</body>
+
 
 % if poskus == model.ZMAGA:
  <h2> ZMAGA! </h2>
 
- <form action="/igra/" method="post">
+ <form action="/nova_igra/" method="post">
     <button type="submit">Nova igra</button>
   </form>
 
@@ -31,17 +31,16 @@
  <h2> Poraz! </h2>
  Pravilno geslo je {{igra.geslo}}
 
- <form action="/igra/" method="post">
+ <form action="/nova_igra/" method="post">
     <button type="submit">Nova igra</button>
   </form>
 
  % else:
 
- <form action="/igra/{{id_igre}}/" method="post">
+ <form action="/igra/" method="post">
     Črka: <input type="text" name= "crka">
     <button type="submit">Poslji ugib</button>
   </form>
 
  % end
 
-</html>
