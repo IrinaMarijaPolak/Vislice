@@ -1,4 +1,4 @@
-
+% import random
 % import model
 % rebase ('base.tpl', title = 'Vislice')
 
@@ -38,8 +38,18 @@
  % else:
 
  <form action="/igra/" method="post">
-    Črka: <input type="text" name= "crka">
-    <button type="submit">Pošlji ugib</button>
+% tipkovnica = "QWERTZUIOPŠĐASDFGHJKLČĆŽYXCVBNM"
+% for moja_crka in tipkovnica:
+% if moja_crka not in igra.crke:
+    <button type="submit", name="crka", value="{{moja_crka}}">{{moja_crka}}</button>
+% end
+% end
+
+
+% preostale_crke = [x for x in tipkovnica if x not in igra.crke]
+% nevem = random.choice(preostale_crke)
+ <button type="submit", name="crka", value="{{nevem}}">?</button>
+
   </form>
 
  % end
